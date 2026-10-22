@@ -1,3 +1,5 @@
+// Lives in the (list) group so it only wraps the list. A Suspense boundary above /tasks/[id]/edit
+// would start streaming a 200 before notFound() runs, losing the real 404 status.
 export default function TasksLoading() {
   return (
     <div className="space-y-6" aria-busy="true" aria-live="polite">
