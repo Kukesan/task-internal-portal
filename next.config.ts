@@ -11,7 +11,11 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   serverExternalPackages: ["@prisma/client", "bcryptjs"],
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      // API responses are per-user; never let a shared cache store them.
+      { source: "/api/:path*", headers: [{ key: "Cache-Control", value: "no-store" }] },
+    ];
   },
 };
 
