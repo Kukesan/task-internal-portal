@@ -29,11 +29,7 @@ export function DeleteTaskButton({ taskId, taskTitle }: { taskId: string; taskTi
 
   return (
     <>
-      <Button
-        variant="ghost"
-        className="text-red-700 hover:bg-red-50"
-        onClick={() => setOpen(true)}
-      >
+      <Button variant="dangerGhost" onClick={() => setOpen(true)}>
         Delete<span className="sr-only"> task “{taskTitle}”</span>
       </Button>
       <ConfirmDialog
