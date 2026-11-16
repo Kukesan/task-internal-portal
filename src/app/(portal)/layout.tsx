@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { LogoutButton } from "@/components/auth/LogoutButton";
-import { requirePageUser } from "@/lib/auth/requireUser";
+import { requirePageUser } from "@/server/auth/requireUser";
 
 export default async function PortalLayout({ children }: { children: ReactNode }) {
   const user = await requirePageUser();

@@ -4,7 +4,7 @@ import {
   hashPassword,
   verifyAgainstDummyHash,
   verifyPassword,
-} from "@/lib/auth/password";
+} from "@/server/auth/password";
 
 describe("password hashing", () => {
   it("produces a salted bcrypt hash at the configured cost", async () => {

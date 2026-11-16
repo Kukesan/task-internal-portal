@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { TaskList } from "@/components/tasks/TaskList";
 import { buttonClasses } from "@/components/ui/Button";
-import { requirePageUser } from "@/lib/auth/requireUser";
+import { requirePageUser } from "@/server/auth/requireUser";
 import * as taskService from "@/server/services/task.service";
 
 export const metadata: Metadata = { title: "Tasks" };

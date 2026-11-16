@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { RateLimitedError } from "@/lib/errors";
-import { FixedWindowRateLimiter } from "@/lib/security/rate-limit";
+import { FixedWindowRateLimiter } from "@/server/security/rate-limit";
 
 function limiterAt(limit: number, windowMs: number) {
   let now = 0;

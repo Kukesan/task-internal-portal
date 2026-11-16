@@ -1,6 +1,6 @@
 import "server-only";
 import { PrismaClient } from "@prisma/client";
-import { env } from "@/lib/env";
+import { env } from "@/server/env";
 
 // Reuse one client across dev hot reloads so we don't exhaust Postgres connections.
 const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };

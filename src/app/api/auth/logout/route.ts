@@ -1,5 +1,5 @@
-import { clearSessionCookie, readSessionCookie } from "@/lib/auth/cookies";
-import { route } from "@/lib/http";
+import { clearSessionCookie, readSessionCookie } from "@/server/auth/cookies";
+import { route } from "@/server/http";
 import * as authService from "@/server/services/auth.service";
 
 // Idempotent: logging out without a valid session still clears the cookie and returns 204.

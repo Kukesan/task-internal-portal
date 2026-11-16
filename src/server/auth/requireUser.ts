@@ -1,7 +1,7 @@
 import "server-only";
 import { redirect } from "next/navigation";
-import { readSessionCookie } from "@/lib/auth/cookies";
-import { getCurrentUser } from "@/lib/auth/getCurrentUser";
+import { readSessionCookie } from "@/server/auth/cookies";
+import { getCurrentUser } from "@/server/auth/getCurrentUser";
 import { UnauthenticatedError } from "@/lib/errors";
 import type { PublicUser } from "@/lib/types";
 

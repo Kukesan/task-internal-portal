@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { requireUser } from "@/lib/auth/requireUser";
-import { route } from "@/lib/http";
+import { requireUser } from "@/server/auth/requireUser";
+import { route } from "@/server/http";
 
 export const GET = route(async () => {
   const user = await requireUser();

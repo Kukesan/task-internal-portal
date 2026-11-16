@@ -1,6 +1,6 @@
 import "server-only";
 import { Prisma } from "@prisma/client";
-import { prisma } from "@/lib/db";
+import { prisma } from "@/server/db";
 import type { PublicUser } from "@/lib/types";
 
 /** The only user fields that may leave the server. Never includes passwordHash. */

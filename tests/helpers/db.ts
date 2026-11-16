@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import { prisma } from "@/lib/db";
+import { prisma } from "@/server/db";
 import type { PublicUser } from "@/lib/types";
 
 export { prisma };

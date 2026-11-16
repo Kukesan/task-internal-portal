@@ -1,5 +1,5 @@
 import { afterAll, beforeEach, describe, expect, it } from "vitest";
-import { validateSessionToken } from "@/lib/auth/session";
+import { validateSessionToken } from "@/server/auth/session";
 import { ConflictError, InvalidCredentialsError } from "@/lib/errors";
 import { signupSchema } from "@/lib/validation/auth";
 import * as authService from "@/server/services/auth.service";

@@ -1,6 +1,6 @@
 import "server-only";
 import type { Prisma, Priority, TaskStatus } from "@prisma/client";
-import { prisma } from "@/lib/db";
+import { prisma } from "@/server/db";
 
 const taskSelect = {
   id: true,

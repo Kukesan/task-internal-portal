@@ -1,6 +1,6 @@
 import "server-only";
 import { createHash, randomBytes } from "node:crypto";
-import { env } from "@/lib/env";
+import { env } from "@/server/env";
 import type { PublicUser } from "@/lib/types";
 import * as sessionRepo from "@/server/repositories/session.repo";
 

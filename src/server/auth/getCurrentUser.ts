@@ -1,7 +1,7 @@
 import "server-only";
 import { cache } from "react";
-import { readSessionCookie } from "@/lib/auth/cookies";
-import { validateSessionToken } from "@/lib/auth/session";
+import { readSessionCookie } from "@/server/auth/cookies";
+import { validateSessionToken } from "@/server/auth/session";
 import type { PublicUser } from "@/lib/types";
 
 /**

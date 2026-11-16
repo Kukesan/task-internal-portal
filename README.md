@@ -42,7 +42,7 @@ Hosted Postgres (Neon, Supabase, RDS) works the same way: use its connection str
 
 ### Environment variables
 
-`src/lib/env.ts` validates these with Zod when the server starts. A missing or invalid value stops the server with a clear error.
+`src/server/env.ts` validates these with Zod when the server starts. A missing or invalid value stops the server with a clear error.
 
 | Variable            | Purpose                                                      |
 | ------------------- | ------------------------------------------------------------ |

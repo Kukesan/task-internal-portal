@@ -2,8 +2,8 @@ import "server-only";
 import { NextResponse, type NextRequest } from "next/server";
 import { ZodError, type ZodType, type ZodTypeDef } from "zod";
 import { AppError, RateLimitedError, type ErrorCode } from "@/lib/errors";
-import { assertSameOrigin } from "@/lib/security/origin";
-import { env } from "@/lib/env";
+import { assertSameOrigin } from "@/server/security/origin";
+import { env } from "@/server/env";
 
 export type ApiErrorBody = {
   error: { code: ErrorCode; message: string; details?: Record<string, string[] | undefined> };

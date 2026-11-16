@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { safeRedirectPath } from "@/lib/auth/constants";
 import { ForbiddenError } from "@/lib/errors";
-import { assertSameOrigin } from "@/lib/security/origin";
+import { assertSameOrigin } from "@/server/security/origin";
 
 const APP_URL = "http://localhost:3000";
 

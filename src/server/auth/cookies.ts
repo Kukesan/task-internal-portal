@@ -1,7 +1,7 @@
 import "server-only";
 import { cookies } from "next/headers";
 import { SESSION_COOKIE_NAME } from "@/lib/auth/constants";
-import { env } from "@/lib/env";
+import { env } from "@/server/env";
 
 export async function readSessionCookie(): Promise<string | null> {
   return (await cookies()).get(SESSION_COOKIE_NAME)?.value ?? null;

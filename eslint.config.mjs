@@ -33,7 +33,7 @@ const config = [
         {
           paths: [
             { name: "@prisma/client", importNames: ["PrismaClient"], message: "Use a repository." },
-            { name: "@/lib/db", message: "Only repositories may import the Prisma client." },
+            { name: "@/server/db", message: "Only repositories may import the Prisma client." },
           ],
         },
       ],

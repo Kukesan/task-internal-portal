@@ -1,5 +1,5 @@
 import "server-only";
-import { prisma } from "@/lib/db";
+import { prisma } from "@/server/db";
 import type { PublicUser } from "@/lib/types";
 import { publicUserSelect } from "@/server/repositories/user.repo";
 

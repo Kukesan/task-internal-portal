@@ -1,6 +1,6 @@
 import "server-only";
-import { hashPassword, verifyAgainstDummyHash, verifyPassword } from "@/lib/auth/password";
-import { createSession, invalidateSession, type CreatedSession } from "@/lib/auth/session";
+import { hashPassword, verifyAgainstDummyHash, verifyPassword } from "@/server/auth/password";
+import { createSession, invalidateSession, type CreatedSession } from "@/server/auth/session";
 import { ConflictError, InvalidCredentialsError } from "@/lib/errors";
 import type { PublicUser } from "@/lib/types";
 import type { LoginInput, SignupInput } from "@/lib/validation/auth";

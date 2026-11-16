@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { setSessionCookie } from "@/lib/auth/cookies";
-import { clientIp, parseJson, route } from "@/lib/http";
-import { loginLimiter } from "@/lib/security/rate-limit";
+import { setSessionCookie } from "@/server/auth/cookies";
+import { clientIp, parseJson, route } from "@/server/http";
+import { loginLimiter } from "@/server/security/rate-limit";
 import { loginSchema } from "@/lib/validation/auth";
 import * as authService from "@/server/services/auth.service";
 

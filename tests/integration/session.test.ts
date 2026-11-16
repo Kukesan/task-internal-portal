@@ -4,7 +4,7 @@ import {
   hashSessionToken,
   invalidateSession,
   validateSessionToken,
-} from "@/lib/auth/session";
+} from "@/server/auth/session";
 import { createTestUser, prisma, resetDatabase } from "../helpers/db";
 
 const DAY_MS = 24 * 60 * 60 * 1000;

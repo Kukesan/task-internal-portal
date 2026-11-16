@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { clearSessionCookie } from "@/lib/auth/cookies";
-import { getCurrentUser } from "@/lib/auth/getCurrentUser";
+import { clearSessionCookie } from "@/server/auth/cookies";
+import { getCurrentUser } from "@/server/auth/getCurrentUser";
 
 /**
  * Landing point when a page finds a session cookie that no longer maps to a valid session.

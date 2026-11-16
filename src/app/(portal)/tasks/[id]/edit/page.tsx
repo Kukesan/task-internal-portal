@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { TaskForm } from "@/components/tasks/TaskForm";
-import { requirePageUser } from "@/lib/auth/requireUser";
+import { requirePageUser } from "@/server/auth/requireUser";
 import { NotFoundError } from "@/lib/errors";
 import type { TaskDTO } from "@/lib/types";
 import * as taskService from "@/server/services/task.service";

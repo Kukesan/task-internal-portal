@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { requireUser } from "@/lib/auth/requireUser";
-import { parseJson, route } from "@/lib/http";
+import { requireUser } from "@/server/auth/requireUser";
+import { parseJson, route } from "@/server/http";
 import { createTaskSchema } from "@/lib/validation/task";
 import * as taskService from "@/server/services/task.service";
 

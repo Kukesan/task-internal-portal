@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 import { DEFAULT_AUTHENTICATED_PATH } from "@/lib/auth/constants";
-import { getCurrentUser } from "@/lib/auth/getCurrentUser";
+import { getCurrentUser } from "@/server/auth/getCurrentUser";
 
 export default async function AuthLayout({ children }: { children: ReactNode }) {
   // Middleware only checks the cookie exists; confirm against the DB before redirecting away.
