@@ -88,9 +88,14 @@ Server Components (pages) ─────────── requirePageUser() �
 ```
 
 - **`src/app`**: routes only. `(auth)` holds the sign-in and sign-up pages. `(portal)` is the session-guarded area, with a header and logout. `api/**` holds thin Route Handlers.
-- **`src/server/services`**: business rules (ownership, 404 mapping, DTO shaping). Services never import Prisma.
-- **`src/server/repositories`**: the only layer that touches Prisma. An ESLint `no-restricted-imports` rule enforces this.
-- **`src/lib`**: cross-cutting code: `auth/` (sessions, password, guards), `validation/` (Zod schemas shared by client and server), `http.ts` (route wrapper and the `{ error: { code, message, details? } }` envelope), `security/` (Origin check, rate limiter) and `env.ts`.
+- **`src/server`**: server-only code. Most files import `server-only`, so the build fails if a client component pulls them in.
+  - `services/`: business rules (ownership, 404 mapping, DTO shaping). Services never import Prisma.
+  - `repositories/`: the only layer that touches Prisma (`db.ts`). An ESLint `no-restricted-imports` rule enforces this.
+  - `auth/`: sessions, password hashing, cookies, and the `requireUser()` / `requirePageUser()` guards.
+  - `security/`: Origin check and rate limiter.
+  - `http.ts`: the route wrapper and the `{ error: { code, message, details? } }` envelope.
+  - `env.ts`: environment validation.
+- **`src/lib`**: code that is safe on both client and server: `validation/` (Zod schemas shared by forms and API), `errors.ts`, `types.ts`, `auth/constants.ts` (also used by middleware and the login form), and `client/` (browser-only fetch and form helpers).
 - **`src/components`**: UI. Server components by default. Only interactive parts are client components: forms, `StatusSelect`, `DeleteTaskButton`/`ConfirmDialog` and `LogoutButton`.
 
 **Auth is checked in three layers:**
